@@ -1,3 +1,17 @@
+.formSetting{
+color: aliceblue;
+/* display: inline; */
+background-color: white;
+text-align: center;
+    
+    /* font-size: 25px; */
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+     
+}
+
+
 html,
 body {
   width: 100%;
@@ -71,5 +85,6 @@ h1 {
     margin: 0 auto;
      
   }
+  
   
   

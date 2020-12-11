@@ -24,7 +24,7 @@ export default function Home() {
                     <span>Shehla Mushtaq</span>
                     {/* <span>Shehla</span>
                     <span>Mushtaq</span> */}
-              </Trail>
+        </Trail>
       
       <div>
             <animated.h3 style={props1}>I am a web development engineer and I use react to develop pages. This project is a resume template that can be used as the project home page or resume page.</animated.h3>
