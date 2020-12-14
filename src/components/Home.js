@@ -19,7 +19,7 @@ export default function Home() {
       })
 
     return (
-        <div>
+        <div style={{marginTop: 140}}>
         <Trail open={open} onClick={() => set((state) => !state)}>
                     <span>Shehla Mushtaq</span>
                     {/* <span>Shehla</span>

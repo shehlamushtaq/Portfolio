@@ -5,7 +5,12 @@ body{
   /* justify-content: center; */
   margin-top: 100px;
 }
-
+.threediv{
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+  color: aliceblue;
+}
 h1 {
   text-align: center;
   color: beige;
