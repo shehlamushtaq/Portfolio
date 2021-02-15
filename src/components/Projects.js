@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import { useSpring, animated } from "react-spring";
+// import { useSpring, animated } from "react-spring";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -10,7 +10,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import p1 from "./images/p1.jpg";
+// import p1 from "./images/p1.jpg";
 const Projects = () => {
   const useStyles = makeStyles((theme) => ({
     root: {
@@ -22,9 +22,7 @@ const Projects = () => {
     },
   }));
   const classes = useStyles();
-  const myproject = () => {
-    // window.open("https://shehla-mushtaq-project-1.netlify.app");
-  };
+
   return (
     <div className={classes.root}>
       <h4 style={{ color: "white" }}> The list of my work</h4>
