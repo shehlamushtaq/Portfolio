@@ -18,113 +18,74 @@ const Projects = () => {
       flexGrow: 1,
     },
     media: {
-      height: 140,
+      height: 280,
     },
   }));
   const classes = useStyles();
+
+  const data = [
+    {
+      title: "Project 1 Company Port Folio",
+      desc:
+        "This is my first project , based on CSS and HTML , using BootStrap.",
+      image: "/images/p1.jpg",
+      link: "https://shehla-mushtaq-project-1.netlify.app",
+    },
+    {
+      title: "Project of covid app",
+      desc:
+        "This is Covid app , shows statistics of covid, made in react, with material ui",
+      image: "/images/p3.jpg",
+      link: "https://covid-app-nvtcc.netlify.app",
+    },
+    {
+      title: "Project 3 TODO CRUD",
+      desc:
+        "This project is based on CRUD operations , based on CSS and HTML , using BootStrap, and react",
+      image: "/images/p2.jpg",
+      link: "https://todo-app-nvtcc.netlify.app",
+    },
+  ];
 
   return (
     <div className={classes.root}>
       <h4 style={{ color: "white" }}> The list of my work</h4>
       <Grid container spacing={4}>
-        <Grid item xs>
-          <Card className={classes.root}>
-            <CardActionArea>
-              <CardMedia
-                className={classes.media}
-                image="./images/p1.jpg"
-                //src={"./images/p1.jpg"}
-                title="Project one company portfolio"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Project 1 Company Port Folio{" "}
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  This is my first project , based on CSS and HTML , using
-                  BootStrape,
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button
-                onClick={() =>
-                  window.open("https://shehla-mushtaq-project-1.netlify.app")
-                }
-                size="small"
-                color="primary"
-              >
-                More details
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-        {/* //============================================================ */}
-        <Grid item xs>
-          <Card className={classes.root}>
-            <CardActionArea>
-              <CardMedia
-                className={classes.media}
-                image="./images/p1.jpg"
-                //src={"./images/p1.jpg"}
-                title="Project one company portfolio"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Project of covid app{" "}
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  This is Covid app , shows statistics of covid, made in react,
-                  with material ui{" "}
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button
-                onClick={() =>
-                  window.open("https://covid-app-nvtcc.netlify.app")
-                }
-                size="small"
-                color="primary"
-              >
-                More details
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-        {/* //===================================================================== */}
-        <Grid item xs>
-          <Card className={classes.root}>
-            <CardActionArea>
-              <CardMedia
-                className={classes.media}
-                image="./images/p1.jpg"
-                //src={"./images/p1.jpg"}
-                title="Project one company portfolio"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Project 3 TODO CRUD{" "}
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  This project is based on CRUD operations , based on CSS and
-                  HTML , using BootStrape, and react
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button
-                onClick={() =>
-                  window.open("https://todo-app-nvtcc.netlify.app")
-                }
-                size="small"
-                color="primary"
-              >
-                More details
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
+        {data.map((item, ind) => (
+          <Grid item lg>
+            <Card className={classes.root}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.media}
+                  image={item.image}
+                  //src={"./images/p1.jpg"}
+                  title={item.title}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    {item.title}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    {item.desc}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  onClick={() => window.open(item.link)}
+                  size="small"
+                  color="primary"
+                >
+                  More details
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+        ))}
         {/* //===================================================================== */}
 
         {/* //=========================================================== */}
